@@ -1,0 +1,30 @@
+PODS:
+  - AimyboxCore (0.1.0):
+    - AimyboxCore/AimyboxDialogAPI (= 0.1.0)
+    - AimyboxCore/AVTextToSpeech (= 0.1.0)
+    - AimyboxCore/SFSpeechToText (= 0.1.0)
+    - AimyboxCore/Utils (= 0.1.0)
+  - AimyboxCore/AimyboxDialogAPI (0.1.0):
+    - AimyboxCore/Utils
+  - AimyboxCore/AVTextToSpeech (0.1.0):
+    - AimyboxCore/Utils
+  - AimyboxCore/SFSpeechToText (0.1.0):
+    - AimyboxCore/Utils
+  - AimyboxCore/Utils (0.1.0)
+
+DEPENDENCIES:
+  - AimyboxCore (from `~/workspace/aimybox-ios-sdk/AimyboxCore.podspec`)
+  - AimyboxCore/AimyboxDialogAPI (from `~/workspace/aimybox-ios-sdk/AimyboxCore.podspec`)
+  - AimyboxCore/AVTextToSpeech (from `~/workspace/aimybox-ios-sdk/AimyboxCore.podspec`)
+  - AimyboxCore/SFSpeechToText (from `~/workspace/aimybox-ios-sdk/AimyboxCore.podspec`)
+
+EXTERNAL SOURCES:
+  AimyboxCore:
+    :path: "~/workspace/aimybox-ios-sdk/AimyboxCore.podspec"
+
+SPEC CHECKSUMS:
+  AimyboxCore: 5a672f4d9fef4e1c91d3dfb29756bf46b68c7dfb
+
+PODFILE CHECKSUM: adb5a64d8c127d9b89ca4cfc1da8034d22aa0790
+
+COCOAPODS: 1.7.5
