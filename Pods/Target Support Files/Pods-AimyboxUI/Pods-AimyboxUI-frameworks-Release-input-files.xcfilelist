@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-AimyboxUI/Pods-AimyboxUI-frameworks.sh
+${BUILT_PRODUCTS_DIR}/AimyboxCore/AimyboxCore.framework
+${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework

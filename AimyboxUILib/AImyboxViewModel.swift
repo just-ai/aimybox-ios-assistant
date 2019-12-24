@@ -16,13 +16,31 @@ public class AimyboxViewModel: NSObject {
             onProviderReceived()
         }
     }
+    /**
+     Text that shown on `Aimybox` start up.
+     */
+    public var greetingText: String? {
+        willSet {
+            if let _greetingText = newValue {
+                items.append(
+                    TextItem(_greetingText)
+                )
+            }
+        }
+    }
+    public var emptyRecognitionText: String = ""
+    /**
+     Notifies `AimyboxView` to update itself.
+     */
     public var onItemsUpdated: (()->())?
     /**
      User queries and aimybox responses.
      */
     private var items: [AimyboxViewModelItem] = [] {
         didSet {
-            onItemsUpdated?()
+            assistantDebouncer.debounce(delay: 0.25) { [weak self] in
+                self?.onItemsUpdated?()
+            }
         }
     }
     /**
@@ -32,18 +50,24 @@ public class AimyboxViewModel: NSObject {
     
     private var userQueryItem: AimyboxViewModel.QueryItem?
     
-    private var assistantButtonDebouncer = DispatchDebouncer()
+    private var assistantDebouncer = DispatchDebouncer()
     
     @objc public func onAssistantButtonTap() {
         guard let _aimybox = aimybox else { return }
         
-        assistantButtonDebouncer.debounce(delay: 0.15) {
+        assistantDebouncer.debounce(delay: 0.15) {
             if _aimybox.state != .standby {
                 _aimybox.standby()
             } else {
                 _aimybox.startRecognition()
             }
         }
+    }
+    
+    public var onAimyboxStateChange: ((AimyboxState)->())?
+    
+    deinit {
+        aimybox?.standby()
     }
 }
 
@@ -77,7 +101,16 @@ extension AimyboxViewModel {
             }
             if response is ButtonsReply {
                 items.append(
-                    AimyboxViewModel.ButtonsItem(buttons: response as! ButtonsReply)
+                    AimyboxViewModel.ButtonsItem(buttons: response as! ButtonsReply) { [weak self] button in
+                        if let _url = button.url {
+//                            self?.aimybox?.standby()
+                            UIApplication.shared.open(_url)
+                        } else {
+                            DispatchQueue.global().async {
+                                self?.aimybox?.sendRequest(query: button.text)
+                            }
+                        }
+                    }
                 )
             }
         }
@@ -88,20 +121,20 @@ extension AimyboxViewModel {
 extension AimyboxViewModel: AimyboxDelegate {
 
     public func aimybox(_ aimybox: Aimybox, willMoveFrom oldState: AimyboxState, to newState: AimyboxState) {
-        print("AAAAA", newState, "AAAAA")
-    }
-    
-    public func sttRecognitionStarted(_ stt: SpeechToText) {
-        let item = AimyboxViewModel.QueryItem(text: "")
-        DispatchQueue.main.async { [weak self] in
-            self?.userQueryItem = item
-            self?.items.append(item)
-        }
+        onAimyboxStateChange?(newState)
     }
     
     public func stt(_ stt: SpeechToText, recognitionPartial result: String) {
+        guard !result.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
+            return
+        }
+        
         DispatchQueue.main.async { [weak self] in
-            print(result)
+            if self?.userQueryItem == nil {
+                let item = AimyboxViewModel.QueryItem(text: result)
+                self?.userQueryItem = item
+                self?.items.append(item)
+            }
             self?.userQueryItem?.text = result
             self?.onItemsUpdated?()
         }
@@ -109,9 +142,23 @@ extension AimyboxViewModel: AimyboxDelegate {
     
     public func stt(_ stt: SpeechToText, recognitionFinal result: String) {
         DispatchQueue.main.async { [weak self] in
-            print(result)
             self?.userQueryItem?.text = result
             self?.onItemsUpdated?()
+            self?.userQueryItem = nil
+        }
+    }
+
+    public func sttRecognitionCancelled(_ stt: SpeechToText) {
+        DispatchQueue.main.async { [weak self] in
+            self?.userQueryItem = nil
+        }
+    }
+    
+    public func sttEmptyRecognitionResult(_ stt: SpeechToText) {
+        DispatchQueue.main.async { [weak self] in
+            self?.items.append(
+                AimyboxViewModel.TextItem(self?.emptyRecognitionText ?? "")
+            )
         }
     }
     

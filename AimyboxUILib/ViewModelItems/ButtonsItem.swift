@@ -19,13 +19,15 @@ public extension AimyboxViewModel {
         
         public let buttons: [Button]
         
-        public let onButtonTap: (Button)->()
+        public var onButtonTap: (Button)->() = {_ in }
         
-        public init(buttons reply: ButtonsReply, onButtonTap: @escaping (Button)->() = { button in print(String(describing: button.text)) }) {
+        public init(buttons reply: ButtonsReply, onButtonTap block: @escaping (Button)->()) {
             self.rowCount = 1
             self.type = .buttons
             self.buttons = reply.buttons
-            self.onButtonTap = onButtonTap
+            self.onButtonTap = { [weak self] _button in
+                block(_button)
+            }
         }
     }
 }

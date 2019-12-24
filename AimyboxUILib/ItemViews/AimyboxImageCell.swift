@@ -7,15 +7,27 @@
 //
 
 import UIKit
+import SDWebImage
 
 class AimyboxImageCell: UITableViewCell {
     /**
      Use this method to customize appearance of this cell.
      */
     public static var onAwakeFromNib: ((AimyboxImageCell) -> ())?
+    /**
+     Placeholder image that is used when image is loading.
+     */
+    public static var phImage: UIImage = UIImage(named: "placeholderimage",
+                                                 in: Bundle(for: AimyboxImageCell.self),
+                                                 compatibleWith: nil)!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        backgroundColor = .clear
+        _imageView.layer.cornerRadius = 20.0
+        _imageView.layer.masksToBounds = true
+        
         type(of: self).onAwakeFromNib?(self)
     }
     
@@ -25,20 +37,22 @@ class AimyboxImageCell: UITableViewCell {
                 return
             }
             
-            let image = UIImage(data: try! Data(contentsOf: _item.image))!
-            _imageView.image = image
-            let ratio = image.size.width / image.size.height
-            let newHeight = _imageView.frame.width / ratio
-            
-            _imageView.translatesAutoresizingMaskIntoConstraints = false
-            let constraint = _imageView.heightAnchor.constraint(equalToConstant: newHeight)
-            constraint.priority = UILayoutPriority(rawValue: 750)
-            constraint.isActive = true
-            _imageView.superview?.layoutIfNeeded()
+            _imageView.sd_setImage(with: _item.image, placeholderImage: AimyboxImageCell.phImage) { [weak _imageView, _imageViewHeight](image, _, _, _) in
+                let ratio = (image?.size.width ?? 1.0) / (image?.size.height ?? 1.0)
+                let newHeight = Int((_imageView?.frame.width ?? 1.0) / ratio)
+                
+                _imageViewHeight?.constant = CGFloat(newHeight)
+                _imageView?.isHidden = false
+            }
         }
     }
     
-    @IBOutlet weak var _imageView: UIImageView!
+    @IBOutlet weak var _imageViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var _imageView: SDAnimatedImageView!
+    
+    override func prepareForReuse() {
+        _imageView.image = AimyboxImageCell.phImage
+    }
     
     // MARK: - Internals
     

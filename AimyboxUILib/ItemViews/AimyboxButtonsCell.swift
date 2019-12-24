@@ -14,14 +14,22 @@ class AimyboxUIButton: UIButton {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        onInitDefault()
         type(of: self).onInit?(self)
         addTarget(self, action:#selector(self.buttonTap), for: .touchUpInside)
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        onInitDefault()
         type(of: self).onInit?(self)
         addTarget(self, action:#selector(self.buttonTap), for: .touchUpInside)
+    }
+    
+    private func onInitDefault() {
+        layer.cornerRadius = 22
+        layer.masksToBounds = true
+        backgroundColor = .systemGray
     }
     
     public var onButtonTap: (()->())?
@@ -31,11 +39,11 @@ class AimyboxUIButton: UIButton {
     }
 }
 
-var _next: [Int:UIColor] = [
-    0:UIColor.green, 1:UIColor.red, 2:UIColor.blue, 3:UIColor.gray, 4:UIColor.purple
-]
-
 class AimyboxButtonsCell: UITableViewCell {
+    /**
+     Stack view in which buttons are injected.
+     */
+    @IBOutlet weak var mainStackView: UIStackView!
     /**
      Button height.
      */
@@ -43,7 +51,23 @@ class AimyboxButtonsCell: UITableViewCell {
     /**
      Distance between button rows.
      */
-    public var stackVerticalSpacing: CGFloat = 0.0
+    public var stackVerticalSpacing: CGFloat = 16.0
+    /**
+     Leading contraint to content view.
+     */
+    public var stackViewLeading: CGFloat = 26.0
+    /**
+    Trailing contraint to content view.
+    */
+    public var stackViewTrailing: CGFloat = 26.0
+    /**
+    Top contraint to content view.
+    */
+    public var stackViewTop: CGFloat = 16.0
+    /**
+     
+     */
+    public var stackViewHorizontalSpacing: CGFloat = 20.0
     /**
      Max count of buttons in a row.
      */
@@ -55,7 +79,25 @@ class AimyboxButtonsCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        backgroundColor = .clear
+        layer.cornerRadius = 22.0
+        layer.masksToBounds = true
+        
         type(of: self).onAwakeFromNib?(self)
+        
+        mainStackView.constraints.forEach {
+            mainStackView.removeConstraint($0)
+        }
+        
+        mainStackView.spacing = stackViewHorizontalSpacing
+        mainStackView.translatesAutoresizingMaskIntoConstraints = false
+        mainStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: stackViewLeading).isActive = true
+        mainStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -stackViewTrailing).isActive = true
+        mainStackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: stackViewTop).isActive = true
+        let constraint = mainStackView.heightAnchor.constraint(equalToConstant: stackViewHeight)
+        constraint.priority = UILayoutPriority(rawValue: 750)
+        constraint.isActive = true
     }
     
     public var item: AimyboxViewModelItem? {
@@ -65,7 +107,6 @@ class AimyboxButtonsCell: UITableViewCell {
             }
             
             var currentStackView: UIStackView = mainStackView
-            var tmp = 0
             var limit = 0
             _item.buttons.forEach { button in
                 if limit == maxButtonCountInStackView {
@@ -78,22 +119,16 @@ class AimyboxButtonsCell: UITableViewCell {
                 
                 let uiButton = AimyboxUIButton()
                 uiButton.setTitle(button.text, for: .normal)
-                uiButton.backgroundColor = _next[tmp]!
                 uiButton.onButtonTap = {
                     _item.onButtonTap(button)
                 }
                 currentStackView.addArrangedSubview(uiButton)
                 
                 limit += 1
-                tmp += 1
             }
             currentStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
         }
     }
-    /**
-     Stack view in which buttons are injected.
-     */
-    @IBOutlet weak var mainStackView: UIStackView!
 
     // MARK: - Internals
     
@@ -116,6 +151,10 @@ class AimyboxButtonsCell: UITableViewCell {
         stackView.alignment = mainStackView.alignment
         stackView.distribution = mainStackView.distribution
         stackView.axis = mainStackView.axis
+        stackView.backgroundColor = view.backgroundColor
+        stackView.layer.cornerRadius = view.layer.cornerRadius
+        stackView.layer.masksToBounds = view.layer.masksToBounds
+        stackView.spacing = mainStackView.spacing
         
         contentView.addSubview(stackView)
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -141,12 +180,17 @@ class AimyboxButtonsCell: UITableViewCell {
         stackView.alignment = mainStackView.alignment
         stackView.distribution = mainStackView.distribution
         stackView.axis = mainStackView.axis
+        stackView.backgroundColor = mainStackView.backgroundColor
+        stackView.layer.cornerRadius = mainStackView.layer.cornerRadius
+        stackView.layer.masksToBounds = mainStackView.layer.masksToBounds
+        stackView.spacing = mainStackView.spacing
+        
         
         contentView.addSubview(stackView)
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
-        stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
-        stackView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
+        stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: stackViewLeading).isActive = true
+        stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -stackViewTrailing).isActive = true
+        stackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: stackViewTop).isActive = true
         let constraint = stackView.heightAnchor.constraint(equalToConstant: stackViewHeight)
         constraint.priority = UILayoutPriority(rawValue: 750)
         constraint.isActive = true

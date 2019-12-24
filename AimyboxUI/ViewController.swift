@@ -20,6 +20,9 @@ class ViewController: UIViewController, AimyboxProvider {
         super.viewDidLoad()
         
         aimyboxView.provider = self
+        aimyboxView.backgroundColor = .systemYellow
+        aimyboxView.greetingText = "Привет, чем я могу помочь?"
+        aimyboxView.emptyRecognitionText = "Попробуй повторить..."
     }
     
     func aimybox() -> Aimybox? {

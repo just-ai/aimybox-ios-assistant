@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5566727523B25E8E00007199 /* AimyboxUILib.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5566727423B25E8E00007199 /* AimyboxUILib.xcassets */; };
+		5566727723B2947A00007199 /* AimyboxRecognitionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5566727623B2947A00007199 /* AimyboxRecognitionButton.swift */; };
 		55C14B1123B1236D00B77B74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C14B1023B1236D00B77B74 /* AppDelegate.swift */; };
 		55C14B1323B1236D00B77B74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C14B1223B1236D00B77B74 /* SceneDelegate.swift */; };
 		55C14B1523B1236D00B77B74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C14B1423B1236D00B77B74 /* ViewController.swift */; };
@@ -31,6 +33,8 @@
 		55C14B5323B130BD00B77B74 /* ImageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C14B5223B130BD00B77B74 /* ImageItem.swift */; };
 		55C14B5523B1310500B77B74 /* QueryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C14B5423B1310500B77B74 /* QueryItem.swift */; };
 		55C14B5723B131F800B77B74 /* AimyboxViewModelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C14B5623B131F800B77B74 /* AimyboxViewModelItem.swift */; };
+		5D0B8FB096981CD82D81FDE5 /* Pods_AimyboxUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C5390DB19128B785C74AB3 /* Pods_AimyboxUI.framework */; };
+		E74A27087553CA67D488C01B /* Pods_AimyboxUI_AimyboxUILib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0315B1FC6E1E8B8894B0973C /* Pods_AimyboxUI_AimyboxUILib.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +62,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		02C5390DB19128B785C74AB3 /* Pods_AimyboxUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AimyboxUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0315B1FC6E1E8B8894B0973C /* Pods_AimyboxUI_AimyboxUILib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AimyboxUI_AimyboxUILib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		13A7236B7976B1E56502DA22 /* Pods-AimyboxUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AimyboxUI.debug.xcconfig"; path = "Target Support Files/Pods-AimyboxUI/Pods-AimyboxUI.debug.xcconfig"; sourceTree = "<group>"; };
+		5566727423B25E8E00007199 /* AimyboxUILib.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AimyboxUILib.xcassets; sourceTree = "<group>"; };
+		5566727623B2947A00007199 /* AimyboxRecognitionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AimyboxRecognitionButton.swift; sourceTree = "<group>"; };
 		55C14B0D23B1236D00B77B74 /* AimyboxUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AimyboxUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55C14B1023B1236D00B77B74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55C14B1223B1236D00B77B74 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +93,9 @@
 		55C14B5223B130BD00B77B74 /* ImageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageItem.swift; sourceTree = "<group>"; };
 		55C14B5423B1310500B77B74 /* QueryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryItem.swift; sourceTree = "<group>"; };
 		55C14B5623B131F800B77B74 /* AimyboxViewModelItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AimyboxViewModelItem.swift; sourceTree = "<group>"; };
+		87B2F573D52BA800CA4CE4BD /* Pods-AimyboxUI-AimyboxUILib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AimyboxUI-AimyboxUILib.debug.xcconfig"; path = "Target Support Files/Pods-AimyboxUI-AimyboxUILib/Pods-AimyboxUI-AimyboxUILib.debug.xcconfig"; sourceTree = "<group>"; };
+		DE4251320586C600ECBF7E9B /* Pods-AimyboxUI-AimyboxUILib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AimyboxUI-AimyboxUILib.release.xcconfig"; path = "Target Support Files/Pods-AimyboxUI-AimyboxUILib/Pods-AimyboxUI-AimyboxUILib.release.xcconfig"; sourceTree = "<group>"; };
+		FAF706EF00E5C51851F7A843 /* Pods-AimyboxUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AimyboxUI.release.xcconfig"; path = "Target Support Files/Pods-AimyboxUI/Pods-AimyboxUI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +104,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55C14B3023B1239B00B77B74 /* AimyboxUILib.framework in Frameworks */,
+				5D0B8FB096981CD82D81FDE5 /* Pods_AimyboxUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,12 +112,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E74A27087553CA67D488C01B /* Pods_AimyboxUI_AimyboxUILib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20A7E7C3ED4D5C5A9841CADB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				02C5390DB19128B785C74AB3 /* Pods_AimyboxUI.framework */,
+				0315B1FC6E1E8B8894B0973C /* Pods_AimyboxUI_AimyboxUILib.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		55C14B0423B1236D00B77B74 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +135,7 @@
 				55C14B2A23B1239B00B77B74 /* AimyboxUILib */,
 				55C14B0E23B1236D00B77B74 /* Products */,
 				57F6A181E4453B2059514A40 /* Pods */,
+				20A7E7C3ED4D5C5A9841CADB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,8 +168,10 @@
 				55C14B4D23B1305A00B77B74 /* ViewModelItems */,
 				55C14B3823B1243000B77B74 /* ItemViews */,
 				55C14B4923B1247D00B77B74 /* AimyboxView.swift */,
+				5566727623B2947A00007199 /* AimyboxRecognitionButton.swift */,
 				55C14B4B23B124C200B77B74 /* AImyboxViewModel.swift */,
 				55C14B5623B131F800B77B74 /* AimyboxViewModelItem.swift */,
+				5566727423B25E8E00007199 /* AimyboxUILib.xcassets */,
 				55C14B2B23B1239B00B77B74 /* AimyboxUILib.h */,
 				55C14B2C23B1239B00B77B74 /* Info.plist */,
 			);
@@ -181,6 +207,10 @@
 		57F6A181E4453B2059514A40 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				13A7236B7976B1E56502DA22 /* Pods-AimyboxUI.debug.xcconfig */,
+				FAF706EF00E5C51851F7A843 /* Pods-AimyboxUI.release.xcconfig */,
+				87B2F573D52BA800CA4CE4BD /* Pods-AimyboxUI-AimyboxUILib.debug.xcconfig */,
+				DE4251320586C600ECBF7E9B /* Pods-AimyboxUI-AimyboxUILib.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -203,10 +233,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 55C14B2123B1236D00B77B74 /* Build configuration list for PBXNativeTarget "AimyboxUI" */;
 			buildPhases = (
+				D3B0D2CC9EB5D0E738613ED3 /* [CP] Check Pods Manifest.lock */,
 				55C14B0923B1236D00B77B74 /* Sources */,
 				55C14B0A23B1236D00B77B74 /* Frameworks */,
 				55C14B0B23B1236D00B77B74 /* Resources */,
 				55C14B3523B1239B00B77B74 /* Embed Frameworks */,
+				88DD45C684072DE971ED496D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -222,6 +254,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 55C14B3223B1239B00B77B74 /* Build configuration list for PBXNativeTarget "AimyboxUILib" */;
 			buildPhases = (
+				B94F719A7A47C9A28BF9CB4A /* [CP] Check Pods Manifest.lock */,
 				55C14B2423B1239B00B77B74 /* Headers */,
 				55C14B2523B1239B00B77B74 /* Sources */,
 				55C14B2623B1239B00B77B74 /* Frameworks */,
@@ -293,10 +326,75 @@
 				55C14B4823B1243900B77B74 /* AimyboxImageCell.xib in Resources */,
 				55C14B4323B1243900B77B74 /* AimyboxQueryCell.xib in Resources */,
 				55C14B4523B1243900B77B74 /* AimyboxButtonsCell.xib in Resources */,
+				5566727523B25E8E00007199 /* AimyboxUILib.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		88DD45C684072DE971ED496D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AimyboxUI/Pods-AimyboxUI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AimyboxUI/Pods-AimyboxUI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AimyboxUI/Pods-AimyboxUI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B94F719A7A47C9A28BF9CB4A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AimyboxUI-AimyboxUILib-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3B0D2CC9EB5D0E738613ED3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AimyboxUI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		55C14B0923B1236D00B77B74 /* Sources */ = {
@@ -320,6 +418,7 @@
 				55C14B4A23B1247D00B77B74 /* AimyboxView.swift in Sources */,
 				55C14B5723B131F800B77B74 /* AimyboxViewModelItem.swift in Sources */,
 				55C14B4123B1243900B77B74 /* AimyboxButtonsCell.swift in Sources */,
+				5566727723B2947A00007199 /* AimyboxRecognitionButton.swift in Sources */,
 				55C14B4223B1243900B77B74 /* AimyboxImageCell.swift in Sources */,
 				55C14B4623B1243900B77B74 /* AimyboxTextCell.swift in Sources */,
 				55C14B4423B1243900B77B74 /* AimyboxQueryCell.swift in Sources */,
@@ -473,6 +572,7 @@
 		};
 		55C14B2223B1236D00B77B74 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13A7236B7976B1E56502DA22 /* Pods-AimyboxUI.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -484,8 +584,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.justai.AimyboxUI;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.justai.aimybox-ios-sdk-example-app";
+				PRODUCT_NAME = AimyboxIOS;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -493,6 +594,7 @@
 		};
 		55C14B2323B1236D00B77B74 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAF706EF00E5C51851F7A843 /* Pods-AimyboxUI.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -504,8 +606,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.justai.AimyboxUI;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.justai.aimybox-ios-sdk-example-app";
+				PRODUCT_NAME = AimyboxIOS;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -513,6 +616,7 @@
 		};
 		55C14B3323B1239B00B77B74 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87B2F573D52BA800CA4CE4BD /* Pods-AimyboxUI-AimyboxUILib.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -544,6 +648,7 @@
 		};
 		55C14B3423B1239B00B77B74 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE4251320586C600ECBF7E9B /* Pods-AimyboxUI-AimyboxUILib.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;

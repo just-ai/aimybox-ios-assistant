@@ -14,6 +14,7 @@ target 'AimyboxUI' do
 
     pod 'AimyboxCore/AVTextToSpeech', :path => '~/workspace/aimybox-ios-sdk/AimyboxCore.podspec'
 
+    pod 'SDWebImage'
   end
 
 end

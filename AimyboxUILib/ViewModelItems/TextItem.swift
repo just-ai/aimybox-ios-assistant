@@ -24,5 +24,11 @@ public extension AimyboxViewModel {
             self.type = .text
             self.text = reply.text
         }
+        
+        public init(_ text: String) {
+            self.rowCount = 1
+            self.type = .text
+            self.text = text
+        }
     }
 }
