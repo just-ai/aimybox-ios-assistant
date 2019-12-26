@@ -3,27 +3,65 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55B69B2823B4F3BB001C955D /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B69B2723B4F3BB001C955D /* RootViewController.swift */; };
 		55C14B1123B1236D00B77B74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C14B1023B1236D00B77B74 /* AppDelegate.swift */; };
 		55C14B1323B1236D00B77B74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C14B1223B1236D00B77B74 /* SceneDelegate.swift */; };
-		55C14B1523B1236D00B77B74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C14B1423B1236D00B77B74 /* ViewController.swift */; };
 		55C14B1823B1236D00B77B74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55C14B1623B1236D00B77B74 /* Main.storyboard */; };
 		55C14B1A23B1236D00B77B74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55C14B1923B1236D00B77B74 /* Assets.xcassets */; };
 		55C14B1D23B1236D00B77B74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55C14B1B23B1236D00B77B74 /* LaunchScreen.storyboard */; };
+		A898B47E61B53302BD5D80D9 /* Pods_AimyboxUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9056A33E1DBF3A74AE68C1F6 /* Pods_AimyboxUI.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		55C14B3523B1239B00B77B74 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		55C14B0D23B1236D00B77B74 /* AimyboxUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AimyboxUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5566727423B25E8E00007199 /* AimyboxUILib.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AimyboxUILib.xcassets; sourceTree = "<group>"; };
+		5566727623B2947A00007199 /* AimyboxRecognitionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AimyboxRecognitionButton.swift; sourceTree = "<group>"; };
+		55B69B2523B4EA52001C955D /* AimyboxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AimyboxViewController.swift; sourceTree = "<group>"; };
+		55B69B2723B4F3BB001C955D /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		55B69B2923B4F78D001C955D /* AimyboxOpenButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AimyboxOpenButton.swift; sourceTree = "<group>"; };
+		55C14B0D23B1236D00B77B74 /* AimyboxIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AimyboxIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55C14B1023B1236D00B77B74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55C14B1223B1236D00B77B74 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		55C14B1423B1236D00B77B74 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		55C14B1723B1236D00B77B74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		55C14B1923B1236D00B77B74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55C14B1C23B1236D00B77B74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55C14B1E23B1236D00B77B74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55C14B2B23B1239B00B77B74 /* AimyboxUILib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AimyboxUILib.h; sourceTree = "<group>"; };
+		55C14B2C23B1239B00B77B74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55C14B3923B1243900B77B74 /* AimyboxButtonsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AimyboxButtonsCell.swift; sourceTree = "<group>"; };
+		55C14B3A23B1243900B77B74 /* AimyboxImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AimyboxImageCell.swift; sourceTree = "<group>"; };
+		55C14B3B23B1243900B77B74 /* AimyboxQueryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AimyboxQueryCell.xib; sourceTree = "<group>"; };
+		55C14B3C23B1243900B77B74 /* AimyboxQueryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AimyboxQueryCell.swift; sourceTree = "<group>"; };
+		55C14B3D23B1243900B77B74 /* AimyboxButtonsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AimyboxButtonsCell.xib; sourceTree = "<group>"; };
+		55C14B3E23B1243900B77B74 /* AimyboxTextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AimyboxTextCell.swift; sourceTree = "<group>"; };
+		55C14B3F23B1243900B77B74 /* AimyboxTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AimyboxTextCell.xib; sourceTree = "<group>"; };
+		55C14B4023B1243900B77B74 /* AimyboxImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AimyboxImageCell.xib; sourceTree = "<group>"; };
+		55C14B4923B1247D00B77B74 /* AimyboxView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AimyboxView.swift; sourceTree = "<group>"; };
+		55C14B4B23B124C200B77B74 /* AImyboxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AImyboxViewModel.swift; sourceTree = "<group>"; };
+		55C14B4E23B1306E00B77B74 /* TextItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextItem.swift; sourceTree = "<group>"; };
+		55C14B5023B1309000B77B74 /* ButtonsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsItem.swift; sourceTree = "<group>"; };
+		55C14B5223B130BD00B77B74 /* ImageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageItem.swift; sourceTree = "<group>"; };
+		55C14B5423B1310500B77B74 /* QueryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryItem.swift; sourceTree = "<group>"; };
+		55C14B5623B131F800B77B74 /* AimyboxViewModelItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AimyboxViewModelItem.swift; sourceTree = "<group>"; };
+		9056A33E1DBF3A74AE68C1F6 /* Pods_AimyboxUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AimyboxUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		953E81986592BABD29542069 /* Pods-AimyboxUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AimyboxUI.debug.xcconfig"; path = "Target Support Files/Pods-AimyboxUI/Pods-AimyboxUI.debug.xcconfig"; sourceTree = "<group>"; };
+		F440E2EDB8CE3AA18CC762D2 /* Pods-AimyboxUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AimyboxUI.release.xcconfig"; path = "Target Support Files/Pods-AimyboxUI/Pods-AimyboxUI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A898B47E61B53302BD5D80D9 /* Pods_AimyboxUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,14 +80,17 @@
 			isa = PBXGroup;
 			children = (
 				55C14B0F23B1236D00B77B74 /* AimyboxUI */,
+				55C14B2A23B1239B00B77B74 /* AimyboxUILib */,
 				55C14B0E23B1236D00B77B74 /* Products */,
+				57F6A181E4453B2059514A40 /* Pods */,
+				DBD65C401F7A3C97AD3BD858 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		55C14B0E23B1236D00B77B74 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				55C14B0D23B1236D00B77B74 /* AimyboxUI.app */,
+				55C14B0D23B1236D00B77B74 /* AimyboxIOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,13 +100,74 @@
 			children = (
 				55C14B1023B1236D00B77B74 /* AppDelegate.swift */,
 				55C14B1223B1236D00B77B74 /* SceneDelegate.swift */,
-				55C14B1423B1236D00B77B74 /* ViewController.swift */,
+				55B69B2723B4F3BB001C955D /* RootViewController.swift */,
 				55C14B1623B1236D00B77B74 /* Main.storyboard */,
 				55C14B1923B1236D00B77B74 /* Assets.xcassets */,
 				55C14B1B23B1236D00B77B74 /* LaunchScreen.storyboard */,
 				55C14B1E23B1236D00B77B74 /* Info.plist */,
 			);
 			path = AimyboxUI;
+			sourceTree = "<group>";
+		};
+		55C14B2A23B1239B00B77B74 /* AimyboxUILib */ = {
+			isa = PBXGroup;
+			children = (
+				55C14B4D23B1305A00B77B74 /* ViewModelItems */,
+				55C14B3823B1243000B77B74 /* ItemViews */,
+				55C14B4923B1247D00B77B74 /* AimyboxView.swift */,
+				55C14B4B23B124C200B77B74 /* AImyboxViewModel.swift */,
+				55B69B2523B4EA52001C955D /* AimyboxViewController.swift */,
+				55C14B5623B131F800B77B74 /* AimyboxViewModelItem.swift */,
+				5566727623B2947A00007199 /* AimyboxRecognitionButton.swift */,
+				55B69B2923B4F78D001C955D /* AimyboxOpenButton.swift */,
+				5566727423B25E8E00007199 /* AimyboxUILib.xcassets */,
+				55C14B2B23B1239B00B77B74 /* AimyboxUILib.h */,
+				55C14B2C23B1239B00B77B74 /* Info.plist */,
+			);
+			path = AimyboxUILib;
+			sourceTree = "<group>";
+		};
+		55C14B3823B1243000B77B74 /* ItemViews */ = {
+			isa = PBXGroup;
+			children = (
+				55C14B3923B1243900B77B74 /* AimyboxButtonsCell.swift */,
+				55C14B3D23B1243900B77B74 /* AimyboxButtonsCell.xib */,
+				55C14B3A23B1243900B77B74 /* AimyboxImageCell.swift */,
+				55C14B4023B1243900B77B74 /* AimyboxImageCell.xib */,
+				55C14B3C23B1243900B77B74 /* AimyboxQueryCell.swift */,
+				55C14B3B23B1243900B77B74 /* AimyboxQueryCell.xib */,
+				55C14B3E23B1243900B77B74 /* AimyboxTextCell.swift */,
+				55C14B3F23B1243900B77B74 /* AimyboxTextCell.xib */,
+			);
+			path = ItemViews;
+			sourceTree = "<group>";
+		};
+		55C14B4D23B1305A00B77B74 /* ViewModelItems */ = {
+			isa = PBXGroup;
+			children = (
+				55C14B4E23B1306E00B77B74 /* TextItem.swift */,
+				55C14B5023B1309000B77B74 /* ButtonsItem.swift */,
+				55C14B5223B130BD00B77B74 /* ImageItem.swift */,
+				55C14B5423B1310500B77B74 /* QueryItem.swift */,
+			);
+			path = ViewModelItems;
+			sourceTree = "<group>";
+		};
+		57F6A181E4453B2059514A40 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				953E81986592BABD29542069 /* Pods-AimyboxUI.debug.xcconfig */,
+				F440E2EDB8CE3AA18CC762D2 /* Pods-AimyboxUI.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DBD65C401F7A3C97AD3BD858 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9056A33E1DBF3A74AE68C1F6 /* Pods_AimyboxUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +177,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 55C14B2123B1236D00B77B74 /* Build configuration list for PBXNativeTarget "AimyboxUI" */;
 			buildPhases = (
+				C3D26B11F22A562B25CE8237 /* [CP] Check Pods Manifest.lock */,
 				55C14B0923B1236D00B77B74 /* Sources */,
 				55C14B0A23B1236D00B77B74 /* Frameworks */,
 				55C14B0B23B1236D00B77B74 /* Resources */,
+				55C14B3523B1239B00B77B74 /* Embed Frameworks */,
+				60622300ECEFDF970977C787 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -84,7 +190,7 @@
 			);
 			name = AimyboxUI;
 			productName = AimyboxUI;
-			productReference = 55C14B0D23B1236D00B77B74 /* AimyboxUI.app */;
+			productReference = 55C14B0D23B1236D00B77B74 /* AimyboxIOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -133,13 +239,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		60622300ECEFDF970977C787 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AimyboxUI/Pods-AimyboxUI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AimyboxUI/Pods-AimyboxUI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AimyboxUI/Pods-AimyboxUI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3D26B11F22A562B25CE8237 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AimyboxUI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		55C14B0923B1236D00B77B74 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55C14B1523B1236D00B77B74 /* ViewController.swift in Sources */,
 				55C14B1123B1236D00B77B74 /* AppDelegate.swift in Sources */,
+				55B69B2823B4F3BB001C955D /* RootViewController.swift in Sources */,
 				55C14B1323B1236D00B77B74 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,17 +430,22 @@
 		};
 		55C14B2223B1236D00B77B74 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 953E81986592BABD29542069 /* Pods-AimyboxUI.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = GSGWB68KPF;
 				INFOPLIST_FILE = AimyboxUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.justai.AimyboxUI;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.justai.aimybox-ios-sdk-example-app";
+				PRODUCT_NAME = AimyboxIOS;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -300,17 +453,22 @@
 		};
 		55C14B2323B1236D00B77B74 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F440E2EDB8CE3AA18CC762D2 /* Pods-AimyboxUI.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = GSGWB68KPF;
 				INFOPLIST_FILE = AimyboxUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.justai.AimyboxUI;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.justai.aimybox-ios-sdk-example-app";
+				PRODUCT_NAME = AimyboxIOS;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
