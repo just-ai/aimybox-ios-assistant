@@ -19,9 +19,10 @@ Pod::Spec.new do |s|
   s.swift_versions = '4.2'
 
   s.source_files = ['AimyboxUILib/**/*.{swift,xib}', 'AimyboxUILib/*.{swift,xib}']
-  s.resources = ['AimyboxUILib/*.{xib,storyboard,json,xcassets}', 'AimyboxUILib/**/*.{xib}']
+  s.resources = ['AimyboxUILib/*.{xib,storyboard,json,xcassets}']
 
   s.dependency 'Aimybox'
-  s.dependency 'SDWebImage'  
+  s.dependency 'Aimybox/Utils'
+  s.dependency 'SDWebImage'
 
 end

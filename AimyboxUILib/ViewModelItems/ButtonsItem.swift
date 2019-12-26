@@ -25,7 +25,7 @@ public extension AimyboxViewModel {
             self.rowCount = 1
             self.type = .buttons
             self.buttons = reply.buttons
-            self.onButtonTap = { [weak self] _button in
+            self.onButtonTap = { _button in
                 block(_button)
             }
         }
