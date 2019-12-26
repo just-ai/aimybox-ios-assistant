@@ -9,9 +9,11 @@
 /* Begin PBXBuildFile section */
 		5566727523B25E8E00007199 /* AimyboxUILib.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5566727423B25E8E00007199 /* AimyboxUILib.xcassets */; };
 		5566727723B2947A00007199 /* AimyboxRecognitionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5566727623B2947A00007199 /* AimyboxRecognitionButton.swift */; };
+		55B69B2623B4EA52001C955D /* AimyboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B69B2523B4EA52001C955D /* AimyboxViewController.swift */; };
+		55B69B2823B4F3BB001C955D /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B69B2723B4F3BB001C955D /* RootViewController.swift */; };
+		55B69B2A23B4F78D001C955D /* AimyboxOpenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B69B2923B4F78D001C955D /* AimyboxOpenButton.swift */; };
 		55C14B1123B1236D00B77B74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C14B1023B1236D00B77B74 /* AppDelegate.swift */; };
 		55C14B1323B1236D00B77B74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C14B1223B1236D00B77B74 /* SceneDelegate.swift */; };
-		55C14B1523B1236D00B77B74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C14B1423B1236D00B77B74 /* ViewController.swift */; };
 		55C14B1823B1236D00B77B74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55C14B1623B1236D00B77B74 /* Main.storyboard */; };
 		55C14B1A23B1236D00B77B74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55C14B1923B1236D00B77B74 /* Assets.xcassets */; };
 		55C14B1D23B1236D00B77B74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55C14B1B23B1236D00B77B74 /* LaunchScreen.storyboard */; };
@@ -67,10 +69,12 @@
 		13A7236B7976B1E56502DA22 /* Pods-AimyboxUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AimyboxUI.debug.xcconfig"; path = "Target Support Files/Pods-AimyboxUI/Pods-AimyboxUI.debug.xcconfig"; sourceTree = "<group>"; };
 		5566727423B25E8E00007199 /* AimyboxUILib.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AimyboxUILib.xcassets; sourceTree = "<group>"; };
 		5566727623B2947A00007199 /* AimyboxRecognitionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AimyboxRecognitionButton.swift; sourceTree = "<group>"; };
-		55C14B0D23B1236D00B77B74 /* AimyboxUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AimyboxUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		55B69B2523B4EA52001C955D /* AimyboxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AimyboxViewController.swift; sourceTree = "<group>"; };
+		55B69B2723B4F3BB001C955D /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		55B69B2923B4F78D001C955D /* AimyboxOpenButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AimyboxOpenButton.swift; sourceTree = "<group>"; };
+		55C14B0D23B1236D00B77B74 /* AimyboxUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = AimyboxUI.app; path = AimyboxIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55C14B1023B1236D00B77B74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55C14B1223B1236D00B77B74 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		55C14B1423B1236D00B77B74 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		55C14B1723B1236D00B77B74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		55C14B1923B1236D00B77B74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55C14B1C23B1236D00B77B74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -153,7 +157,7 @@
 			children = (
 				55C14B1023B1236D00B77B74 /* AppDelegate.swift */,
 				55C14B1223B1236D00B77B74 /* SceneDelegate.swift */,
-				55C14B1423B1236D00B77B74 /* ViewController.swift */,
+				55B69B2723B4F3BB001C955D /* RootViewController.swift */,
 				55C14B1623B1236D00B77B74 /* Main.storyboard */,
 				55C14B1923B1236D00B77B74 /* Assets.xcassets */,
 				55C14B1B23B1236D00B77B74 /* LaunchScreen.storyboard */,
@@ -168,9 +172,11 @@
 				55C14B4D23B1305A00B77B74 /* ViewModelItems */,
 				55C14B3823B1243000B77B74 /* ItemViews */,
 				55C14B4923B1247D00B77B74 /* AimyboxView.swift */,
-				5566727623B2947A00007199 /* AimyboxRecognitionButton.swift */,
 				55C14B4B23B124C200B77B74 /* AImyboxViewModel.swift */,
+				55B69B2523B4EA52001C955D /* AimyboxViewController.swift */,
 				55C14B5623B131F800B77B74 /* AimyboxViewModelItem.swift */,
+				5566727623B2947A00007199 /* AimyboxRecognitionButton.swift */,
+				55B69B2923B4F78D001C955D /* AimyboxOpenButton.swift */,
 				5566727423B25E8E00007199 /* AimyboxUILib.xcassets */,
 				55C14B2B23B1239B00B77B74 /* AimyboxUILib.h */,
 				55C14B2C23B1239B00B77B74 /* Info.plist */,
@@ -401,8 +407,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55C14B1523B1236D00B77B74 /* ViewController.swift in Sources */,
 				55C14B1123B1236D00B77B74 /* AppDelegate.swift in Sources */,
+				55B69B2823B4F3BB001C955D /* RootViewController.swift in Sources */,
 				55C14B1323B1236D00B77B74 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +418,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55C14B5323B130BD00B77B74 /* ImageItem.swift in Sources */,
+				55B69B2623B4EA52001C955D /* AimyboxViewController.swift in Sources */,
 				55C14B4C23B124C200B77B74 /* AImyboxViewModel.swift in Sources */,
 				55C14B4F23B1306E00B77B74 /* TextItem.swift in Sources */,
 				55C14B5123B1309000B77B74 /* ButtonsItem.swift in Sources */,
@@ -419,6 +426,7 @@
 				55C14B5723B131F800B77B74 /* AimyboxViewModelItem.swift in Sources */,
 				55C14B4123B1243900B77B74 /* AimyboxButtonsCell.swift in Sources */,
 				5566727723B2947A00007199 /* AimyboxRecognitionButton.swift in Sources */,
+				55B69B2A23B4F78D001C955D /* AimyboxOpenButton.swift in Sources */,
 				55C14B4223B1243900B77B74 /* AimyboxImageCell.swift in Sources */,
 				55C14B4623B1243900B77B74 /* AimyboxTextCell.swift in Sources */,
 				55C14B4423B1243900B77B74 /* AimyboxQueryCell.swift in Sources */,

@@ -29,7 +29,9 @@ class AimyboxUIButton: UIButton {
     private func onInitDefault() {
         layer.cornerRadius = 22
         layer.masksToBounds = true
-        backgroundColor = .systemGray
+        layer.borderWidth = 1.0
+        layer.borderColor = UIColor.darkGray.cgColor
+        backgroundColor = .clear
     }
     
     public var onButtonTap: (()->())?
@@ -71,7 +73,7 @@ class AimyboxButtonsCell: UITableViewCell {
     /**
      Max count of buttons in a row.
      */
-    public var maxButtonCountInStackView: Int = 2
+    public var maxButtonCountInStackView: Int = 1
     /**
      Use this method to customize appearance of this cell.
      */

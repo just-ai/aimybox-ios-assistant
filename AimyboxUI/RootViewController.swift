@@ -1,37 +1,22 @@
 //
-//  ViewController.swift
+//  RootViewController.swift
 //  AimyboxUI
 //
-//  Created by Vladislav Popovich on 23.12.2019.
+//  Created by Vladislav Popovich on 26.12.2019.
 //  Copyright © 2019 NSI. All rights reserved.
 //
 
-import AimyboxUILib
 import AimyboxCore
+import AimyboxUILib
 
-//"https://api.aimybox.com/request"
-//
+class RootViewController: UIViewController, AimyboxProvider {
 
-class ViewController: UIViewController, AimyboxProvider {
-
-    @IBOutlet weak var aimyboxView: AimyboxView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        aimyboxView.provider = self
-        aimyboxView.backgroundColor = .systemYellow
-        aimyboxView.greetingText = "Привет, чем я могу помочь?"
-        aimyboxView.emptyRecognitionText = "Попробуй повторить..."
-    }
-    
     func aimybox() -> Aimybox? {
         let locale = Locale(identifier: "ru")
         
         guard let speechToText = SFSpeechToText(locale: locale) else {
             fatalError("Locale is not supported.")
         }
-        speechToText.recognitionDebounceDelay = 3.0
         guard let textToSpeech = AVTextToSpeech(locale: locale) else {
             fatalError("Locale is not supported.")
         }
@@ -43,5 +28,23 @@ class ViewController: UIViewController, AimyboxProvider {
         let config = AimyboxBuilder.config(speechToText, textToSpeech, dialogAPI)
         
         return AimyboxBuilder.aimybox(with: config)
+    }
+
+    @IBOutlet weak var aimyboxOpenButton: AimyboxOpenButton!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        aimyboxOpenButton.presenter = self
+        
+        AimyboxViewController.onViewDidLoad = { vc in
+
+            let aimyboxView = vc.aimyboxView
+            
+            aimyboxView.provider = self
+            aimyboxView.backgroundColor = .systemYellow
+            aimyboxView.greetingText = "Привет, чем я могу помочь?"
+            aimyboxView.emptyRecognitionText = "Попробуй повторить..."
+        }
     }
 }
