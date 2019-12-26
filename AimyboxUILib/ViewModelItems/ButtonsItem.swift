@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import AimyboxCore
+import Aimybox
 
 public extension AimyboxViewModel {
     

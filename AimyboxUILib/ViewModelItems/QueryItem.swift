@@ -6,7 +6,7 @@
 //  Copyright © 2019 NSI. All rights reserved.
 //
 
-import AimyboxCore
+import Aimybox
 
 public extension AimyboxViewModel {
 

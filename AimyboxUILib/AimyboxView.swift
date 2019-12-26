@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import AimyboxCore
+import Aimybox
 
 public protocol AimyboxProvider: class {
     /**

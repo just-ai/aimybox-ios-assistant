@@ -8,7 +8,7 @@
 
 import UIKit
 import SDWebImage
-import AimyboxCore
+import Aimybox
 
 public class AimyboxRecognitionButton: UIView {
     /**
