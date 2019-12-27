@@ -3,7 +3,7 @@
 //  AimyboxUILib
 //
 //  Created by Vladislav Popovich on 23.12.2019.
-//  Copyright © 2019 NSI. All rights reserved.
+//  Copyright © Just Ai. All rights reserved.
 //
 
 import Foundation
@@ -28,7 +28,12 @@ public class AimyboxViewModel: NSObject {
             }
         }
     }
+    /**
+     */
     public var emptyRecognitionText: String = ""
+    /**
+     */
+    public var shouldAutoStartRecognition: Bool = true
     /**
      Notifies `AimyboxView` to update itself.
      */
@@ -66,6 +71,11 @@ public class AimyboxViewModel: NSObject {
     
     public var onAimyboxStateChange: ((AimyboxState)->())?
     
+    public func shutdown() {
+        aimybox?.cancelSynthesis()
+        aimybox?.standby()
+    }
+    
     deinit {
         aimybox?.standby()
     }
@@ -85,6 +95,7 @@ extension AimyboxViewModel {
         _aimybox.delegate = self
         
         aimybox = _aimybox
+        _aimybox.startRecognition()
     }
     
     private func dispatchDAPIResponse(_ response: Response) {
@@ -103,7 +114,6 @@ extension AimyboxViewModel {
                 items.append(
                     AimyboxViewModel.ButtonsItem(buttons: response as! ButtonsReply) { [weak self] button in
                         if let _url = button.url {
-//                            self?.aimybox?.standby()
                             UIApplication.shared.open(_url)
                         } else {
                             DispatchQueue.global().async {

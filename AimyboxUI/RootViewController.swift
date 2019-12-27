@@ -3,7 +3,7 @@
 //  AimyboxUI
 //
 //  Created by Vladislav Popovich on 26.12.2019.
-//  Copyright © 2019 NSI. All rights reserved.
+//  Copyright © Just Ai. All rights reserved.
 //
 
 import Aimybox

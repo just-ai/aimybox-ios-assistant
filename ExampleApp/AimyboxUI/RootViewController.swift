@@ -3,7 +3,7 @@
 //  AimyboxUI
 //
 //  Created by Vladislav Popovich on 26.12.2019.
-//  Copyright © 2019 NSI. All rights reserved.
+//  Copyright © Just Ai. All rights reserved.
 //
 
 import Aimybox
@@ -12,7 +12,7 @@ import AimyboxUI
 class RootViewController: UIViewController, AimyboxProvider {
 
     func aimybox() -> Aimybox? {
-        let locale = Locale(identifier: "ru")
+        let locale = Locale(identifier: "en")
         
         guard let speechToText = SFSpeechToText(locale: locale) else {
             fatalError("Locale is not supported.")
@@ -21,7 +21,7 @@ class RootViewController: UIViewController, AimyboxProvider {
             fatalError("Locale is not supported.")
         }
         
-        let dialogAPI = AimyboxDialogAPI(api_key: "sgEfvEonbLOTw6wTEaINZb6zehab8RQF",
+        let dialogAPI = AimyboxDialogAPI(api_key: "Ldf0j7WZi3KwNah2aNeXVIACz0lb9qMH",
                                          unit_key: UIDevice.current.identifierForVendor!.uuidString,
                                          route: URL(string: "https://bot.aimylogic.com/chatapi/webhook/zenbox/cVcGlsvz:800911b5cd537cba8c734e772f8c4a1ebd68fb1a")!)
         
@@ -43,8 +43,8 @@ class RootViewController: UIViewController, AimyboxProvider {
             
             aimyboxView.provider = self
             aimyboxView.backgroundColor = .systemYellow
-            aimyboxView.greetingText = "Привет, чем я могу помочь?"
-            aimyboxView.emptyRecognitionText = "Попробуй повторить..."
+            aimyboxView.greetingText = "Hi, how can i help you?"
+            aimyboxView.emptyRecognitionText = "Please, repeat..."
         }
     }
 }

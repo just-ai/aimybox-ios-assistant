@@ -3,7 +3,7 @@
 //  AimyboxUILib
 //
 //  Created by Vladislav Popovich on 24.12.2019.
-//  Copyright © 2019 NSI. All rights reserved.
+//  Copyright © Just Ai. All rights reserved.
 //
 
 import UIKit
@@ -54,7 +54,7 @@ public class AimyboxRecognitionButton: UIView {
         imageView?.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         imageView?.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         imageView?.image = standbyImage.insetted
-        backgroundColor = .gray
+        backgroundColor = .white
     }
     
     public func update(by state: AimyboxState) {
@@ -80,7 +80,7 @@ public class AimyboxRecognitionButton: UIView {
 extension UIImage {
     var insetted: UIImage {
         self.withAlignmentRectInsets(
-            .init(top: -15, left: -15, bottom: -15, right: -15)
+            .init(top: -20, left: -20, bottom: -20, right: -20)
         )
     }
 }

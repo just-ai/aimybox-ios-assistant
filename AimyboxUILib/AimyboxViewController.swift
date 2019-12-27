@@ -3,7 +3,7 @@
 //  AimyboxUILib
 //
 //  Created by Vladislav Popovich on 26.12.2019.
-//  Copyright © 2019 NSI. All rights reserved.
+//  Copyright © Just Ai. All rights reserved.
 //
 
 import UIKit
@@ -24,7 +24,16 @@ public class AimyboxViewController: UIViewController {
         aimyboxView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         aimyboxView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(closeGesture))
+        swipeRight.direction = .right
+        view.addGestureRecognizer(swipeRight)
+        
         AimyboxViewController.onViewDidLoad?(self)
+    }
+    
+    @objc func closeGesture() {
+        aimyboxView.shutdown()
+        dismiss(animated: true)
     }
 }
 

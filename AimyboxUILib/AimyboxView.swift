@@ -59,6 +59,13 @@ public class AimyboxView: UIView {
      */
     public var recognitionButtonLayoutOffsets: (right: CGFloat, bottom: CGFloat) = (30.0, 30.0)
     /**
+     */
+    public var shouldAutoStartRecognition: Bool = true {
+        willSet {
+            viewModel.shouldAutoStartRecognition = newValue
+        }
+    }
+    /**
      Table view in which all responses and queries added.
      */
     private weak var tableView: UITableView!
@@ -75,11 +82,13 @@ public class AimyboxView: UIView {
      */
     @objc private dynamic var _state: Any = AimyboxState.standby
     
+    public static var onInit: ((AimyboxView)->())?
     
-    override init (frame: CGRect) {
+    override init(frame: CGRect) {
         super.init(frame: frame)
         let tableView = UITableView(frame: frame)
         commonInit(tableView: tableView)
+        AimyboxView.onInit?(self)
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -87,8 +96,13 @@ public class AimyboxView: UIView {
         if let tableView = UITableView(coder: aDecoder) {
             commonInit(tableView: tableView)
         }
+        AimyboxView.onInit?(self)
     }
 
+    public func shutdown() {
+        viewModel.shutdown()
+    }
+    
     func commonInit(tableView: UITableView) {
         
         backgroundColor = .clear

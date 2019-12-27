@@ -30,7 +30,8 @@ class AimyboxUIButton: UIButton {
         layer.cornerRadius = 22
         layer.masksToBounds = true
         layer.borderWidth = 1.0
-        layer.borderColor = UIColor.darkGray.cgColor
+        layer.borderColor = UIColor.black.cgColor
+        setTitleColor(.black, for: .normal)
         backgroundColor = .clear
     }
     
