@@ -3,7 +3,7 @@
 //  AimyboxUILib
 //
 //  Created by Vladislav Popovich on 26.12.2019.
-//  Copyright © 2019 NSI. All rights reserved.
+//  Copyright © Just Ai. All rights reserved.
 //
 
 import UIKit
@@ -33,14 +33,14 @@ public class AimyboxOpenButton: UIView, UIViewControllerTransitioningDelegate {
         addGestureRecognizer(gesture)
     }
     
-    @objc func transitionToOpen() {
+    @objc func transitionToOpen() {        
         let vc = AimyboxViewController()
         
         vc.transitioningDelegate = self
         vc.modalPresentationStyle = .custom
         vc.aimyboxView.backgroundColor = backgroundColor
         
-        presenter?.present(vc, animated: true, completion: nil)
+        presenter?.present(vc, animated: true)
     }
     
     public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
