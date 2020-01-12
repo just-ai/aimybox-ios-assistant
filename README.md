@@ -1,4 +1,4 @@
-# Aimybox
+# AimyboxUI
 
 [![License](https://img.shields.io/cocoapods/l/Aimybox.svg?style=flat)](https://github.com/just-ai/aimybox-ios-assistant/blob/master/LICENSE)
 ![iOS 11.4+](https://img.shields.io/badge/iOS-11.4%2B-blue.svg)
