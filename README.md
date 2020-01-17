@@ -1,10 +1,28 @@
-# AimyboxUI
+<h1 align="center">Aimybox voice assistant</h1>
+<a href="https://aimybox.com"><img src="https://i.imgur.com/qyCxMmO.gif" align="right"></a>
 
-[![License](https://img.shields.io/cocoapods/l/Aimybox.svg?style=flat)](https://github.com/just-ai/aimybox-ios-assistant/blob/master/LICENSE)
-![iOS 11.4+](https://img.shields.io/badge/iOS-11.4%2B-blue.svg)
-![Swift 4.2+](https://img.shields.io/badge/Swift-4.2%2B-orange.svg)
+<h4 align="center">Open source voice assistant built on top of <a href="https://github.com/aimybox/aimybox-ios-sdk">Aimybox SDK</a></h4>
 
-## Installation
+<p align="center">
+    <a href="https://gitter.im/aimybox/community"><img src="https://badges.gitter.im/amitmerchant1990/electron-markdownify.svg"></a>
+    <a href="https://twitter.com/intent/follow?screen_name=aimybox"><img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/aimybox.svg?label=Follow%20on%20Twitter&style=popout"></a>
+  
+### Android version is available [here](https://github.com/just-ai/aimybox-android-assistant)
+
+
+# Key Features
+
+* Provides ready to use **UI components** for fast building of your voice assistant app
+* Modular and independent from speech-to-text, text-to-speech and NLU vendors
+* Provides ready to use speech-to-text and text-to-speech implementations
+* Works with any NLU providers like [Aimylogic](https://help.aimybox.com/en/article/aimylogic-webhook-5quhb1/)
+* Fully customizable and extendable, you can connect any other speech-to-text, text-to-speech and NLU services
+* Open source under Apache 2.0, written in pure Swift
+* Embeddable into any iOS application
+* Voice skills logic and complexity is not limited by any restrictions
+* Can interact with any local device services and local networks
+
+## How to start using
 
 AimyboxUI is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
@@ -80,10 +98,10 @@ class AimyboxTextCell: UITableViewCell {
 }
 ```
 
-## Author
+# More details
 
-vpopovyc, mailuatc@gmail.com
+Please refer to the [demo app](https://github.com/just-ai/aimybox-ios-assistant/tree/master/ExampleApp) to see how to use Aimybox library in your own project.
 
-## License
+# Documentation
 
-AimyboxUI is available under the Apache 2.0 license. See the LICENSE file for more info.
+There is a full Aimybox documentation available [here](https://help.aimybox.com).
