@@ -1,0 +1,6 @@
+framework module AimyboxUI {
+  umbrella header "AimyboxUI-umbrella.h"
+
+  export *
+  module * { export * }
+}

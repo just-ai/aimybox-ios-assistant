@@ -1,0 +1,39 @@
+PODS:
+  - Aimybox/AimyboxDialogAPI (0.0.26):
+    - Aimybox/Core
+    - Aimybox/Utils
+  - Aimybox/AVTextToSpeech (0.0.26):
+    - Aimybox/Core
+    - Aimybox/Utils
+  - Aimybox/Core (0.0.26)
+  - Aimybox/SFSpeechToText (0.0.26):
+    - Aimybox/Core
+    - Aimybox/Utils
+  - Aimybox/Utils (0.0.26)
+  - SDWebImage (5.12.5):
+    - SDWebImage/Core (= 5.12.5)
+  - SDWebImage/Core (5.12.5)
+
+DEPENDENCIES:
+  - Aimybox/AimyboxDialogAPI (from `../aimybox-ios-sdk/`)
+  - Aimybox/AVTextToSpeech (from `../aimybox-ios-sdk/`)
+  - Aimybox/Core (from `../aimybox-ios-sdk/`)
+  - Aimybox/SFSpeechToText (from `../aimybox-ios-sdk/`)
+  - Aimybox/Utils (from `../aimybox-ios-sdk/`)
+  - SDWebImage
+
+SPEC REPOS:
+  trunk:
+    - SDWebImage
+
+EXTERNAL SOURCES:
+  Aimybox:
+    :path: "../aimybox-ios-sdk/"
+
+SPEC CHECKSUMS:
+  Aimybox: 505229ac16ce2b5bb722f220a76923dac423cfd1
+  SDWebImage: 0905f1b7760fc8ac4198cae0036600d67478751e
+
+PODFILE CHECKSUM: 20c98f80e8c6e0e850acce032cbb6b22a7abb14d
+
+COCOAPODS: 1.11.3
